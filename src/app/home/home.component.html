@@ -7,10 +7,12 @@
   </GridLayout>
 </ActionBar>
 
-<StackLayout> 
-  <SearchBar id="bar" hint="click here to search ..." color="white" backgroundColor="green"></SearchBar> 
+<StackLayout>
+  <SearchBar id="bar" hint="click here to search ..." color="white" backgroundColor="green"></SearchBar>
   <Switch checked="false" loaded="onSwitchLoaded"></Switch>
   <Slider value="30" minValue="0" maxValue="50" loaded="onSliderLoaded"></Slider>
-  <ActivityIndicator busy="true" color="red" width="50" 
-   height="50"></ActivityIndicator>
+  <!-- <ActivityIndicator busy="true" color="red" width="50" height="50"></ActivityIndicator> -->
+  <DatePicker year="1980" month="4" day="20" verticalAlignment="center"></DatePicker>
+  <TimePicker hour="9" minute="25" maxHour="23" maxMinute="59" minuteInterval="5">
+  </TimePicker>
 </StackLayout>
