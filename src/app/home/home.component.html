@@ -7,7 +7,10 @@
   </GridLayout>
 </ActionBar>
 
-<GridLayout class="page__content">
-  <Label class="page__content-icon fas" text="&#xf015;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+<StackLayout> 
+  <SearchBar id="bar" hint="click here to search ..." color="white" backgroundColor="green"></SearchBar> 
+  <Switch checked="false" loaded="onSwitchLoaded"></Switch>
+  <Slider value="30" minValue="0" maxValue="50" loaded="onSliderLoaded"></Slider>
+  <ActivityIndicator busy="true" color="red" width="50" 
+   height="50"></ActivityIndicator>
+</StackLayout>
