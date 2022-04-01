@@ -28,6 +28,10 @@ const routes: Routes = [
   path: 'test',
     loadChildren: () => import('~/app/test/test.module').then((m) => m.TestModule),
   },
+  {
+    path: 'flexBox',
+      loadChildren: () => import('~/app/flexBox/flexBox.module').then((m) => m.FlexBoxModule),
+    },
 ]
 
 @NgModule({

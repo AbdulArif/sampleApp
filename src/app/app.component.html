@@ -76,6 +76,16 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
           <Label col="1" text="Test" class="p-r-10"></Label>
         </GridLayout>
 
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/flexBox')"
+          (tap)="onNavItemTap('/flexBox')"
+        >
+          <Label col="0" text="&#xf01c;" class="nt-icon fas"></Label>
+          <Label col="1" text="FlexBox" class="p-r-10"></Label>
+        </GridLayout>
+
       </StackLayout>
     </ScrollView>
   </GridLayout>
