@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Button, EventData } from '@nativescript/core';
 
 @Component({
   selector: 'app-test',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router:Router 
+  ) { }
 
   ngOnInit() {
   }
+
+  onItemTap(){
+    this.router.navigate(['/home'])
+  }
+
+  onButtonTap(args: EventData): void { 
+    console.log(args.eventName); 
+    const button = <Button>args.object; 
+    console.log(button.text); 
+ } 
 
 }

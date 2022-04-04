@@ -7,6 +7,7 @@ import { Application } from '@nativescript/core'
   templateUrl: './settings.component.html',
 })
 export class SettingsComponent implements OnInit {
+ 
   constructor() {
     // Use the component constructor to inject providers.
   }
@@ -18,5 +19,9 @@ export class SettingsComponent implements OnInit {
   onDrawerButtonTap(): void {
     const sideDrawer = <RadSideDrawer>Application.getRootView()
     sideDrawer.showDrawer()
+  }
+
+  ngModel(){
+    
   }
 }

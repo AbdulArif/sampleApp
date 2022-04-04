@@ -7,7 +7,12 @@
   </GridLayout>
 </ActionBar>
 
-<GridLayout class="page__content">
-  <Label class="page__content-icon fas" text="&#xf005;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+<ScrollView>
+  <StackLayout>
+
+      <ListPicker [items]="listPickerCountries"></ListPicker>
+     <Button text="Display Alert Dialog" (tap)="displayAlertDialog()" class="btn btn-primary btn-active" ></Button>
+
+
+  </StackLayout>
+</ScrollView>

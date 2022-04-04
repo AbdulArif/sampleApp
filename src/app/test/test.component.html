@@ -1,6 +1,13 @@
-<StackLayout>
-  <Label text="Test is working" textWrap="true"></Label>
-  
+<StackLayout>  
   <Button text="Go to Home" [nsRouterLink]="['/home']" 
-   pageTransition="slide" clearHistory="true" width=" 40%" height="10%" class="-primary -rounded-lg"></Button>
+   pageTransition="slide" clearHistory="true" width=" 40%" height="10%" class="-primary -rounded-sm"></Button>
+
+   <!-- <Button text=" HOME" (tap)="onItemTap()" width=" 40%" height="10%" class="-primary -rounded-lg"></Button>
+   <Button text=" HOME" width=" 40%" height="10%" class="-primary"></Button>
+   <Button text=" HOME" width=" 40%" height="10%" class="-outline"></Button>
+   <Button text=" HOME" width=" 40%" height="10%" class="-outline -rounded-sm"></Button> -->
+   <Button text=" HOME" width=" 40%" height="10%" class="-outline -rounded-lg"></Button>
+   <Button text='Fire an event' class="-primary" color='gray' (tap)='onButtonTap($event)'></Button>
+
+   
 </StackLayout>>
