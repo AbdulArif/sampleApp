@@ -12,7 +12,15 @@
 
       <ListPicker [items]="listPickerCountries"></ListPicker>
      <Button text="Display Alert Dialog" (tap)="displayAlertDialog()" class="btn btn-primary btn-active" ></Button>
-
+     
+     <Button class="-primary p-8">
+      <FormattedString>
+          <Span text="&#xf007;" class="fas t-18"></Span>
+          <Span text=" Different " color="red"></Span>
+          <Span text="colors in "></Span>
+          <Span text=" Button " backgroundColor="green" color="whitesmoke"></Span>
+      </FormattedString>
+  </Button>
 
   </StackLayout>
 </ScrollView>

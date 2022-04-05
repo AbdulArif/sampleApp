@@ -5,6 +5,7 @@ import { Application, Dialogs } from '@nativescript/core'
 @Component({
   selector: 'Featured',
   templateUrl: './featured.component.html',
+  styleUrls: ['./featured.component.css']
 })
 export class FeaturedComponent implements OnInit {
   listPickerCountries: Array<string> = ["Australia", "Belgium", "Bulgaria", "Canada", "Switzerland",
