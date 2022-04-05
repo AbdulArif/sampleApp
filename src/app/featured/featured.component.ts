@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer'
-import { Application, Dialogs } from '@nativescript/core'
+import { action, Application, Dialogs, login, LoginOptions, LoginResult } from '@nativescript/core'
 
 @Component({
   selector: 'Featured',
@@ -38,6 +38,24 @@ export class FeaturedComponent implements OnInit {
         console.log("Race chosen!");
     });
     // << alert-dialog-code
+}
+
+confirmDialog(){
+  let options: LoginOptions = {
+    title: "Login Form",
+    message: "Enter your credentials",
+    okButtonText: "Login",
+    cancelButtonText: "Cancel",
+    //neutralButtonText: "Neutral",
+    userNameHint: "Enter your username",
+    passwordHint: "Enter your password",
+    userName: "john_doe",
+    password: "123456"
+};
+
+login(options).then((loginResult: LoginResult) => {
+    console.log(loginResult.result);
+});
 }
 
 }
