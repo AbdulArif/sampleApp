@@ -5,10 +5,14 @@ import { Application } from '@nativescript/core'
 @Component({
   selector: 'Browse',
   templateUrl: './browse.component.html',
+  styleUrls: ['./browse.component.css']
+
 })
 export class BrowseComponent implements OnInit {
+
   constructor() {
     // Use the component constructor to inject providers.
+   
   }
 
   ngOnInit(): void {

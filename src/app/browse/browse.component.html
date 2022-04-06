@@ -7,7 +7,26 @@
   </GridLayout>
 </ActionBar>
 
-<GridLayout class="page__content">
-  <Label class="page__content-icon far" text="&#xf1ea;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
+<!-- <Image src="G:\ITS\NativeScript\APP\sampleApp\src\app\images\Logo.jpg" stretch="aspectFit"></Image> -->
+<!-- <Image src="res://Logo.jpg" stretch="none" ></Image>  -->
+
+<GridLayout sdkExampleTitle sdkToggleNavButton>
+  <!-- >> tab-view-styling-ng-html -->
+  <TabView selectedTabTextColor="white" 
+     tabBackgroundColor="orangered"
+     tabTextFontSize="16"
+     androidSelectedTabHighlightColor="green">
+      <StackLayout class="tabText" *tabItem="{title: 'First Tab', iconSource: 'res://icon', textTransform: 'uppercase'}" >
+          <Label text="First Tab" textWrap="true" class="m-15 h2 text-left" color="blue"></Label>
+      </StackLayout>
+      <StackLayout class="tabText" *tabItem="{title: 'Second Tab', iconSource: 'res://icon', textTransform: 'uppercase'}">
+          <Label text="Second Tab" textWrap="true" class="m-15 h2 text-left" color="blue"></Label>
+      </StackLayout>
+  </TabView>
+  
+  <!-- << tab-view-styling-ng-html -->
 </GridLayout>
+
+
+
+
