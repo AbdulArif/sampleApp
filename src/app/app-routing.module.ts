@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'flexBox',
       loadChildren: () => import('~/app/flexBox/flexBox.module').then((m) => m.FlexBoxModule),
     },
+    {
+      path: 'apiCall',
+        loadChildren: () => import('~/app/apiCall/apiCall.module').then((m) => m.ApiCallModule),
+      },
 ]
 
 @NgModule({
