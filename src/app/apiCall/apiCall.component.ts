@@ -10,7 +10,8 @@ export class ApiCallComponent implements OnInit {
 
   constructor(
     public diseaseService: DiseaseService
-  ) { }
+  ) { 
+  }
 
   ngOnInit() {
     console.log('hello ..............')
