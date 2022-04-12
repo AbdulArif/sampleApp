@@ -36,6 +36,10 @@ const routes: Routes = [
       path: 'apiCall',
         loadChildren: () => import('~/app/apiCall/apiCall.module').then((m) => m.ApiCallModule),
       },
+      // {
+      //   path: 'tabView',
+      //     loadChildren: () => import('~/app/tabView/tabView.module').then((m) => m.TabViewModule),
+      //   },
 ]
 
 @NgModule({

@@ -82,7 +82,7 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
         (tap)="onNavItemTap('/apiCall')"
       >
         <Label col="0" text="&#xf01c;" class="nt-icon fas"></Label>
-        <Label col="1" text="apiCall" class="p-r-10"></Label>
+        <Label col="1" text="ApiCall" class="p-r-10"></Label>
       </GridLayout>
         <GridLayout
           columns="auto, *"
@@ -93,6 +93,17 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
           <Label col="0" text="&#xf01c;" class="nt-icon fas"></Label>
           <Label col="1" text="FlexBox" class="p-r-10"></Label>
         </GridLayout>
+
+
+        <!-- <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/tabView')"
+          (tap)="onNavItemTap('/tabView')"
+        >
+          <Label col="0" text="&#xf01c;" class="nt-icon fas"></Label>
+          <Label col="1" text="TabView" class="p-r-10"></Label>
+        </GridLayout> -->
 
       </StackLayout>
     </ScrollView>

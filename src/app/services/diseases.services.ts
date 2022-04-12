@@ -1,5 +1,6 @@
-import { HttpClient, HttpClientModule, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpClientModule, HttpHeaders, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { NativeScriptHttpClientModule } from "@nativescript/angular";
 import { Observable } from "rxjs";
 
 
@@ -7,34 +8,28 @@ import { Observable } from "rxjs";
 
 
 
-@Injectable({
-    providedIn: 'root'
-})
-export class DiseaseService {
-    
-    public apiUrl= 'https://datariverapi.azurewebsites.net/api/Role/GetRoles'
-
-    constructor (private http:HttpClient, private httpModule:HttpClientModule){
-
-    }
-    // GetAllDiseases() {
-    //     let promise = new Promise((resolve, reject) => {
-    //         this.httpModule.request({
-    //            url: 'https://datariverapi.azurewebsites.net/api/Role/GetRoles',
-    //            method: 'GET'
-    //         }).then((res) => {
-    //             resolve(res)
-    //         }, (err) => {
-    //             reject(err)
-    //         })
-    //     })
-    
-    //     return promise;
+@Injectable(
+    //     {
+    //     providedIn: 'root'
     // }
-    GetAllDiseases():Observable<any[]>{
-        const options = {
-            headers: new HttpHeaders().append('Content-Type', 'application/json')
-          }
-        return this.http.get<any[]>("https://datariverapi.azurewebsites.net/api/Role/GetRoles",options)
+)
+export class DiseaseService {
+
+    public apiUrl = 'https://datariverapi.azurewebsites.net/api/Role/GetRoles'
+
+    constructor(private http: HttpClient, private httpModule: HttpClientModule) {
+
     }
+    
+    getData() {
+
+        const options = {
+            headers: new HttpHeaders().append('Content-Type', 'application/json'),
+            //params: new HttpParams().append('userId',userId)
+
+        }
+        return this.http.get(this.apiUrl, options);
+    }
+
+
 }

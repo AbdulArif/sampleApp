@@ -14,8 +14,9 @@ export class ApiCallComponent implements OnInit {
   }
 
   ngOnInit() {
+
     console.log('hello ..............')
-    this.diseaseService.GetAllDiseases().subscribe(
+    this.diseaseService.getData().subscribe(
       {
         next: (res:any)=>{ console.log(res)},
         error: (err:any)=>{console.log(err)}
@@ -23,5 +24,7 @@ export class ApiCallComponent implements OnInit {
     );
 
   }
+
+
 
 }
