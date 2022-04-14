@@ -19,12 +19,9 @@ export class ApiCallComponent implements OnInit {
     this.diseaseService.getData().subscribe(
       {
         next: (res:any)=>{ console.log(res)},
-        error: (err:any)=>{console.log(err)}
+        error: (err:any)=>{console.log("This erroor is: "+ err.error)}
       }
     );
-
   }
-
-
 
 }

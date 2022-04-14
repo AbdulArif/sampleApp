@@ -1,6 +1,7 @@
 import { HttpClient, HttpClientModule, HttpHeaders, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { NativeScriptHttpClientModule } from "@nativescript/angular";
+import { ObservableArray } from "@nativescript/core";
 import { Observable } from "rxjs";
 
 
@@ -9,9 +10,9 @@ import { Observable } from "rxjs";
 
 
 @Injectable(
-    //     {
-    //     providedIn: 'root'
-    // }
+        {
+        providedIn: 'root'
+    }
 )
 export class DiseaseService {
 
@@ -21,14 +22,14 @@ export class DiseaseService {
 
     }
     
-    getData() {
+    getData():Observable<any[]> {
 
         const options = {
             headers: new HttpHeaders().append('Content-Type', 'application/json'),
             //params: new HttpParams().append('userId',userId)
 
         }
-        return this.http.get(this.apiUrl, options);
+        return this.http.get<any[]>(this.apiUrl, options);
     }
 
 
