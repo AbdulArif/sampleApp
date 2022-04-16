@@ -3,22 +3,25 @@ import { RadSideDrawer } from 'nativescript-ui-sidedrawer'
 import { Application } from '@nativescript/core'
 import { HttpClient, HttpParams } from '@angular/common/http'
 import { map } from 'rxjs'
+import { SelectedIndexChangedEventData } from '@nativescript/core/ui/tab-view'
 
 @Component({
   selector: 'Settings',
   templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.css']
+
 })
 export class SettingsComponent implements OnInit {
-  private appId: string;
-  private appCode: string;
-  public weather: any;
+  onSelectedIndexchanged(args: SelectedIndexChangedEventData) {
+    let newIndex = args.newIndex;
+}
  
-  constructor(private http: HttpClient) {
-    this.appId = "HERE-APP-ID";
-    this.appCode = "HERE-APP-CODE";  }
+  constructor() {
+ 
+    }
 
   ngOnInit() {
-    this.getWeather({ latitude: 37.7397, longitude: -121.4252 });
+   
   }
 
   onDrawerButtonTap(): void {
@@ -29,22 +32,4 @@ export class SettingsComponent implements OnInit {
   ngModel(){
     
   }
-  public getWeather(coordinates: any) {
-    let params = new HttpParams({
-        fromObject: {
-            "product": "forecast_7days_simple",
-            "latitude": coordinates.latitude,
-            "longitude": coordinates.longitude,
-            "app_id": this.appId,
-            "app_code": this.appCode
-        }
-    });
-    this.http.get("https://weather.cit.api.here.com/weather/1.0/report.json", { params: params })
-        .pipe(map(result => (<any>result).dailyForecasts.forecastLocation))
-        .subscribe(result => {
-            this.weather = result.forecast;
-        }, error => {
-            console.error(error);
-        });
-}
 }

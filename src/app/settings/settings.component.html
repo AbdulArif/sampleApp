@@ -8,15 +8,29 @@
 </ActionBar>
 
 
-<GridLayout class="page">
-  <ListView [items]="weather" class="list-group">
-      <ng-template let-forecast="item">
-          <GridLayout class="list-group-item" rows="auto, auto" columns="50, *">
-              <Image [src]="forecast.iconLink" rowSpan="2" row="0" col="0"></Image>
-              <Label text="{{ forecast.highTemperature }}C" row="0" col="1" class="p-x-5"></Label>
-              <Label text="{{ forecast.utcTime }}" row="1" col="1" class="p-x-5"></Label>
-          </GridLayout>
-      </ng-template>
-  </ListView>
+<GridLayout class="tabStack">
+	<!-- >> basic-tab-view-html -->
+	<TabView selectedIndex="0" (selectedIndexChanged)="onSelectedIndexchanged($event)" 
+          selectedTabTextColor="Red" 
+          tabBackgroundColor="#00AAFF"
+          androidSelectedTabHighlightColor="Yellow">
+		<StackLayout *tabItem="{title: 'First Tab', iconSource: 'res://icon'}">
+			<StackLayout>
+				<Label text="First Page" textWrap="true" class="m-15 h2 text-left" color="blue"></Label>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout *tabItem="{title: 'Second Tab', iconSource: 'res://icon'}">
+			<StackLayout>
+				<Label text="Second Page" textWrap="true" class="m-15 h2 text-left" color="Green"></Label>
+			</StackLayout>
+		</StackLayout>
+    <StackLayout *tabItem="{title: 'Third Tab' , iconSource: 'res://icon'}">
+    <StackLayout>
+      <Label text="Third Page" textWrap="true" class="m-15 h2 text-left" color="Red"></Label>
+      
+    </StackLayout>
+    </StackLayout>
+	</TabView>
+	<!-- << basic-tab-view-html -->
 </GridLayout>
 
