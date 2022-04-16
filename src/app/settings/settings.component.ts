@@ -12,9 +12,7 @@ import { SelectedIndexChangedEventData } from '@nativescript/core/ui/tab-view'
 
 })
 export class SettingsComponent implements OnInit {
-  onSelectedIndexchanged(args: SelectedIndexChangedEventData) {
-    let newIndex = args.newIndex;
-}
+
  
   constructor() {
  

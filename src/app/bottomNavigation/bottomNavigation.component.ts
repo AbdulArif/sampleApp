@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectedIndexChangedEventData } from '@nativescript/core/ui/tab-view';
 
 @Component({
   selector: 'app-bottomNavigation',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bottomNavigation.component.css']
 })
 export class BottomNavigationComponent implements OnInit {
-
+  onSelectedIndexchanged(args: SelectedIndexChangedEventData) {
+    let newIndex = args.newIndex;
+}
   constructor() { }
 
   ngOnInit() {
