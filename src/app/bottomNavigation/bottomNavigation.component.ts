@@ -7,9 +7,9 @@ import { SelectedIndexChangedEventData } from '@nativescript/core/ui/tab-view';
   styleUrls: ['./bottomNavigation.component.css']
 })
 export class BottomNavigationComponent implements OnInit {
-  onSelectedIndexchanged(args: SelectedIndexChangedEventData) {
-    let newIndex = args.newIndex;
-}
+//   onSelectedIndexchanged(args: SelectedIndexChangedEventData) {
+//     let newIndex = args.newIndex;
+// }
   constructor() { }
 
   ngOnInit() {

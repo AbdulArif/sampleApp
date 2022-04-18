@@ -16,6 +16,7 @@
     "@nativescript/core": "~8.2.0",
     "@nativescript/theme": "~3.0.2",
     "moment": "^2.29.2",
+    "nativescript-angular-cli": "^0.1.9",
     "nativescript-geolocation": "^5.1.0",
     "nativescript-ui-calendar": "^8.0.2",
     "nativescript-ui-sidedrawer": "~10.0.2",
