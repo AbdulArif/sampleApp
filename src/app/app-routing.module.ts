@@ -44,6 +44,10 @@ const routes: Routes = [
     path: 'bottomNav',
     loadChildren: () => import('~/app/bottomNav/bottomNav.module').then((m) => m.BottomNavModule),
   },
+  {
+    path: 'chart',
+    loadChildren: () => import('~/app/chart/chart.module').then((m) => m.ChartModule),
+  },
 ]
 
 @NgModule({

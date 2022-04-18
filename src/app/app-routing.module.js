@@ -34,10 +34,10 @@ const routes = [
         path: 'apiCall',
         loadChildren: () => import('~/app/apiCall/apiCall.module').then((m) => m.ApiCallModule),
     },
-    // {
-    //   path: 'tabView',
-    //     loadChildren: () => import('~/app/tabView/tabView.module').then((m) => m.TabViewModule),
-    //   },
+    {
+      path: 'chart',
+        loadChildren: () => import('~/app/chart/chart.module').then((m) => m.ChartModule),
+      },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
