@@ -3,6 +3,7 @@ import { NativeScriptHttpClientModule, NativeScriptModule } from '@nativescript/
 import { NativeScriptUISideDrawerModule } from 'nativescript-ui-sidedrawer/angular'
 import { HttpClientModule } from '@angular/common/http'
 import { NativeScriptUIChartModule } from "nativescript-ui-chart/angular";
+import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -15,7 +16,8 @@ import { DiseaseService } from './services/diseases.services'
     HttpClientModule,
     NativeScriptHttpClientModule,
     NativeScriptUISideDrawerModule,
-    NativeScriptUIChartModule],
+    NativeScriptUIChartModule,
+    NativeScriptUIDataFormModule],
   declarations: [AppComponent],
   providers:[DiseaseService],
   schemas: [NO_ERRORS_SCHEMA],
