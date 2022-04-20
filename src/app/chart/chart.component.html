@@ -7,7 +7,16 @@
   </GridLayout>
 </ActionBar>
 
-<StackLayout>
-  <SearchBar id="bar" hint="click here to search ..." color="white" backgroundColor="green"></SearchBar>
+<!-- <StackLayout>
+  <SearchBar id="bar" hint="click here to search ..." color="white" backgroundColor="green"></SearchBar> -->
+
+
+  <RadCartesianChart tkExampleTitle tkToggleNavButton>
+    <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+    <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+
+    <BarSeries tkCartesianSeries [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></BarSeries>
+</RadCartesianChart>
+
   
-</StackLayout>
+<!-- </StackLayout> -->
