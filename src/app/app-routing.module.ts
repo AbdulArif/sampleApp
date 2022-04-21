@@ -45,6 +45,10 @@ const routes: Routes = [
     loadChildren: () => import('~/app/bottomNav/bottomNav.module').then((m) => m.BottomNavModule),
   },
   {
+    path: 'radRadialGauge',
+    loadChildren: () => import('~/app/radRadialGauge/radRadialGauge.module').then((m) => m.RadRadialGaugeModule),
+  },
+  {
     path: 'chart',
     loadChildren: () => import('~/app/chart/chart.module').then((m) => m.ChartModule),
   },

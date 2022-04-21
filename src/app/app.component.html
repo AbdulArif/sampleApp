@@ -62,10 +62,10 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
           <Label col="1" text="FlexBox" class="p-r-10"></Label>
         </GridLayout>
 
-        <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/chart')"
-          (tap)="onNavItemTap('/chart')">
+        <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/radRadialGauge')"
+          (tap)="onNavItemTap('/radRadialGauge')">
           <Label col="0" text="&#xf01c;" class="nt-icon fas"></Label>
-          <Label col="1" text="Chart" class="p-r-10"></Label>
+          <Label col="1" text="RadRadialGauge" class="p-r-10"></Label>
         </GridLayout>
 
         <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/bottomNav')"
@@ -78,6 +78,12 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
           [class.-selected]="isComponentSelected('/bottomNavigation')" (tap)="onNavItemTap('/bottomNavigation')">
           <Label col="0" text="&#xf01c;" class="nt-icon fas"></Label>
           <Label col="1" text="BottomNavigation" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/chart')"
+          (tap)="onNavItemTap('/chart')">
+          <Label col="0" text="&#xf01c;" class="nt-icon fas"></Label>
+          <Label col="1" text="Chart" class="p-r-10"></Label>
         </GridLayout>
 
       </StackLayout>

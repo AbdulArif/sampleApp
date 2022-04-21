@@ -1,0 +1,14 @@
+.backGround{
+    background-color: black;
+}
+.contentView{
+background-color:#666666 ;
+opacity: 0.7; 
+height: 100%;
+width: 100%;
+}
+.stacklayout{
+    vertical-align:bottom ;
+    width:75% ; 
+    padding : 20;
+}

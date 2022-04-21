@@ -8,6 +8,7 @@ import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { DiseaseService } from './services/diseases.services'
+import { NativeScriptUIGaugeModule } from "nativescript-ui-gauge/angular";
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -17,7 +18,8 @@ import { DiseaseService } from './services/diseases.services'
     NativeScriptHttpClientModule,
     NativeScriptUISideDrawerModule,
     NativeScriptUIChartModule,
-    NativeScriptUIDataFormModule],
+    NativeScriptUIDataFormModule,
+    NativeScriptUIGaugeModule],
   declarations: [AppComponent],
   providers:[DiseaseService],
   schemas: [NO_ERRORS_SCHEMA],
